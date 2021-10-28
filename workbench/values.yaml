@@ -1,0 +1,18 @@
+userCreate: true
+
+homeStorage:
+  # -- whether to create the persistentVolumeClaim for homeStorage
+  create: true
+  # -- storageClassName - the type of storage to use. Must allow ReadWriteMany
+  storageClassName: "nfs-ralf"
+  requests:
+    # -- the volume of storage to request for this persistent volume claim
+    storage: "2Gi"
+
+
+ingress:
+  enabled: true
+  hosts:
+    - host: ralf.k8s.team.soleng.rstudioservices.com
+      paths:
+          - /
