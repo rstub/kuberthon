@@ -19,7 +19,7 @@ $ helm upgrade --install workbench rstudio/rstudio-workbench \
 ```
 
 ```
-$ helm upgrade --install workbench rstudio-git/rstudio-workbench \
-       -f values.yaml --set license.key=$RSW_LICENSE --devel \
+$ helm upgrade --install workbench rstudio/rstudio-workbench \
+       -f values.yaml --set license.key=$RSW_LICENSE \
        --set config.userProvisioning.mysssd\\.conf.domain/LDAP.ldap_default_authtok=$LDAP_ADMIN_PASSWORD
 ```
